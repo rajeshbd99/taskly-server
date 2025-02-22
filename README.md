@@ -1,8 +1,6 @@
----
 
 ### `Taskly - Server README.md`
 
-```markdown
 # Taskly - Server
 
 ## 🚀 Short Description
@@ -21,21 +19,17 @@ The server side of Taskly is built with Node.js and Express. It handles authenti
 
 ## 🛠 Installation Steps
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/rajeshbd99/taskly-server
-   cd taskly-server
+ -  git clone https://github.com/rajeshbd99/taskly-server
+ -  cd taskly-server
 2. Install the dependencies:
-
-npm install
+ -  npm install
 3. Create a .env file for environment variables:
-
-PORT=3000
-MONGO_URI=your-mongodb-uri
-ACCESS_TOKEN_SECRET=your-secret-key
-NODE_ENV=development
+ -  PORT=3000
+ -  MONGO_URI=your-mongodb-uri
+ -  ACCESS_TOKEN_SECRET=your-secret-key
+ -  NODE_ENV=development
 4. Start the server:
-
-npm start
+ -  npm start
 
 ## ⚙️ Technologies Used
 Node.js
