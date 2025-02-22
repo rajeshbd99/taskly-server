@@ -7,7 +7,7 @@
 The server side of Taskly is built with Node.js and Express. It handles authentication, task CRUD operations, and JWT-based authorization for secure access to user data.
 
 ## 🌐 Live Links
-- **API Base URL:** [Taskly API](https://task-management-2c773.web.app/)
+- **Live Site:** [Taskly Live Site](https://task-management-2c773.web.app/)
 
 ## 📦 Dependencies
 - Express

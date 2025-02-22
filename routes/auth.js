@@ -16,15 +16,15 @@ router.post("/jwt-auth", (req, res) => {
 
     // Generate JWT token
     const token = jwt.sign({ email }, process.env.ACCESS_TOKEN_SECRET, {
-      expiresIn: "5h", // Token expires in 5 hours
+      expiresIn: "5h",
     });
 
     // Send token as an HTTP-only cookie
     res
       .cookie("token", token, {
-        httpOnly: true, // Prevent access by JavaScript on the client side
-        secure: process.env.NODE_ENV === "production", // HTTPS in production
-        sameSite: process.env.NODE_ENV === "production" ? "none" : "strict", // Cookie sharing policy
+        httpOnly: true, 
+        secure: process.env.NODE_ENV === "production", 
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "strict", 
       })
       .send({ success: true, message: "JWT token issued successfully", token });
   } catch (error) {

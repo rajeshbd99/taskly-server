@@ -62,7 +62,7 @@ module.exports = (db) => {
     }
   });
 
-  //-------------------post task----------------
+  //post task
   router.post("/post-task/:email", async (req, res) => {
     try {
       const email = req.params.email;
@@ -105,7 +105,7 @@ module.exports = (db) => {
     }
   });
 
-  //------------------get task-------------------
+  //get task
   router.get("/get-task/:email", async (req, res) => {
     try {
       const email = req.params.email;
@@ -123,8 +123,8 @@ module.exports = (db) => {
   // Edit task
   router.patch("/edit-task/:email/:taskId", async (req, res) => {
     try {
-      const { email, taskId } = req.params; // Extract email and taskId from params
-      const updatedTaskData = req.body; // Get updated task data from the request body
+      const { email, taskId } = req.params; 
+      const updatedTaskData = req.body; 
 
       // Convert taskId to number since it's stored as a number in the database
       const taskIdNum = Number(taskId);
@@ -140,8 +140,7 @@ module.exports = (db) => {
       // Update the specific task in the task array
       const updatedTasks = user.task.map((task) => {
         if (task.taskId === taskIdNum) {
-          // Ensure type matches
-          return { ...task, ...updatedTaskData }; // Merge updated task data
+          return { ...task, ...updatedTaskData }; 
         }
         return task;
       });
@@ -163,11 +162,9 @@ module.exports = (db) => {
   // Delete task
   router.delete("/delete-task/:email/:taskId", async (req, res) => {
     try {
-      const { email, taskId } = req.params; // Extract email and taskId from params
-      //convert task id to number
+      const { email, taskId } = req.params;
       const taskIdNum = Number(taskId);
 
-      // Find the user by email
       const query = { email };
       const user = await userCollection.findOne(query);
 
