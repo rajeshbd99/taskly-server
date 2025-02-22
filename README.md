@@ -32,9 +32,9 @@ The server side of Taskly is built with Node.js and Express. It handles authenti
  -  npm start
 
 ## ⚙️ Technologies Used
-Node.js
-Express.js
-MongoDB
-JWT (for authentication)
-Mongoose (for database interaction)
-Cookie-Parser (for handling cookies)
+- Node.js
+- Express.js
+- MongoDB
+- JWT (for authentication)
+- Mongoose (for database interaction)
+- Cookie-Parser (for handling cookies)
