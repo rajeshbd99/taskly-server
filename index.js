@@ -12,7 +12,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["http://localhost:5173", "https://task-management-2c773.web.app"],
     credentials: true,
   })
 );
@@ -35,7 +35,7 @@ async function main() {
 
     // Root Endpoint
     app.get("/", (req, res) => {
-      res.send("TaskHandler server running");
+      res.send("Taskly server running");
     });
 
     // Start Server
